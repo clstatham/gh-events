@@ -4,7 +4,12 @@ on:
   pull_request:
     types:
       - opened
-
+  push:
+    branches:
+      - main
+      - "feat/**"
+    paths-ignore:
+      - ".github/workflows/*"
 jobs:
   deploy:
     runs-on: ubuntu-latest
